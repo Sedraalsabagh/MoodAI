@@ -3,13 +3,20 @@ from fastapi import FastAPI, File, UploadFile
 from PIL import Image
 import numpy as np
 import io
+from fastapi.middleware.cors import CORSMiddleware
 
 
 model = load_model("history.h5")
 
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"], 
+    allow_headers=["*"],  
+)
 
 def preprocess_image(image: Image.Image) -> np.ndarray:
     
