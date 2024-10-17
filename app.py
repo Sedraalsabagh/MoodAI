@@ -6,7 +6,7 @@ import io
 from fastapi.middleware.cors import CORSMiddleware
 
 
-model = load_model("history.h5")
+model = load_model("history1.h5")
 
 
 app = FastAPI()

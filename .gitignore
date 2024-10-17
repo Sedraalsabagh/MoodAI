@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 history.h5
+history1.h5
 # Distribution / packaging
 .Python
 build/
